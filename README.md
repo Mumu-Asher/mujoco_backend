@@ -49,7 +49,7 @@ sudo apt update && sudo apt install -y \
   ros-humble-sensor-msgs-py ros-humble-tf2-ros-py
 ```
 
-获取代码（把 `<YOUR_REPO_URL>` 换成你的远程仓库地址）：
+获取代码：
 
 ```bash
 cd ~ && mkdir ros2_ws && cd ~/ros2_ws #创建工作区
