@@ -70,22 +70,6 @@ chmod +x scripts/*.sh
 > 运行环境由 `scripts/env.sh` 统一设置：`ROS_DOMAIN_ID=77`、`ROS_LOCALHOST_ONLY=1`、
 > `.venv`/`.deps` 路径。建图/导航脚本都会自动 source 它。
 
-### 精简仓库说明
-
-为控制体积，以下**参考/生成资产**没有提交（运行时不需要）：
-
-| 未提交路径 | 大小 | 说明 |
-|---|---|---|
-| `third_party/livox_laser_simulation/` | ~173 MB | 官方扫描表库；生成好的 `scan_patterns/mid360_directions.npy` 已提交 |
-| `src/nav_stack/models/br/meshes/` | ~43 MB | `br` 原始 CAD 网格；运行用抽稀后的 `meshes_sim/` 已提交 |
-| `src/nav_stack/meshes/` | ~14 MB | 上游 MID-360 外观网格；已移除，br 使用自己的 `meshes_sim/mid360_*.stl` |
-| `third_party/mid360_official/` | ~7.7 MB | 官方 STEP 源；已移除，br 的 MID-360 网格已经生成并提交 |
-| `maps/prebuilt_senior/` | ~2.5 MB | 上游预置地图；已移除，本仓库使用 `maps/map.*` |
-| `maps/map.npz` | ~1.1 MB | 运行生成的压缩中间文件 |
-
-需要重新生成时见 `scripts/convert_mid360_pattern.py` 和 `tools/prep_br_meshes.py` 的注释。
-
----
 
 ## 2. 建图
 
@@ -120,7 +104,6 @@ maps/map.pgm     # 2D 占据栅格
 maps/map.yaml    # 栅格元数据
 ```
 
-每次运行的日志/轨迹在 `artifacts/mapping_<时间>/`（已在 `.gitignore` 中忽略）。
 
 ## 3. 导航
 
