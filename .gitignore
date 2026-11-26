@@ -1,0 +1,19 @@
+.venv/
+.deps/
+build/
+install/
+log/
+artifacts/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+MUJOCO_LOG.TXT
+*.log
+.DS_Store
+
+# 精简上传：参考/生成资产，运行时不需要（见 README「精简仓库说明」）
+third_party/livox_laser_simulation/
+src/nav_stack/models/br/meshes/
+maps/prebuilt_senior/
+maps/map.npz
