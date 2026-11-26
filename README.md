@@ -55,7 +55,7 @@ sudo apt update && sudo apt install -y \
 cd ~ && mkdir ros2_ws && cd ~/ros2_ws #创建工作区
 mkdir src && cd ~/ros2_ws/src
 git clone https://github.com/Mumu-Asher/mujoco_backend.git
-cd robocon_mujoco
+cd ~/ros2_ws/src/robocon_mujoco
 chmod +x scripts/*.sh
 ./scripts/build.sh
 ```
