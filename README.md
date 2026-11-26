@@ -52,7 +52,9 @@ sudo apt update && sudo apt install -y \
 获取代码（把 `<YOUR_REPO_URL>` 换成你的远程仓库地址）：
 
 ```bash
-git clone <YOUR_REPO_URL> robocon_mujoco
+cd ~ && mkdir ros2_ws && cd ~/ros2_ws #创建工作区
+mkdir src && cd ~/ros2_ws/src
+git clone https://github.com/Mumu-Asher/mujoco_backend.git
 cd robocon_mujoco
 chmod +x scripts/*.sh
 ./scripts/build.sh
